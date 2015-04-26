@@ -1,0 +1,38 @@
+-# This file is app/view/recipes/index.html.haml
+%h1 All Recipes
+
+%table#recipes
+  %thead
+    %tr
+      %th Add to Grocery List
+      %th Recipe Title
+      %th More about Recipe
+
+  %tbody
+    - @recipes.each do |recipe|
+      %tr{:class => 'selected_items'}
+        %td= check_box_tag 'recipe[selected]',  nil, false, :value => recipe.id, :class => "recipe"
+        %td= recipe.title
+        %td= link_to "More about #{recipe.title}", recipe_path(recipe)
+
+
+= link_to 'Add new recipe', new_recipe_path
+
+= form_tag selected_items_recipes_path, :method => :post, :id => 'recipes_form'  do
+  = hidden_field_tag "items",  nil, :id => 'recipe_ids'
+  = link_to 'Selected Recipes', 'javascript:void(0)',  :onclick => "$('#recipes_form').submit();"
+
+
+:javascript
+  function updateTextArea() {
+       var allVals = $('.selected_items :checked').map(function() {
+         return $(this).val();
+       }).get();
+       $('#recipe_ids').val(allVals)
+    }
+   $(function() {
+     $('.selected_items').click(updateTextArea);
+     updateTextArea();
+   });
+
+

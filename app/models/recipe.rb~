@@ -1,0 +1,4 @@
+class Recipe < ActiveRecord::Base
+  attr_accessible :title, :apples, :beet, :carrot, :celery, :collardgreens, :cucumbers, :ginger, :grapefruit, :lemon, :lime, :mint, :orange, :pear, :pumpkinpiespice, :romaine, :spinach, :sweetpotato, :swisschard, :tumericpowder
+ 
+end

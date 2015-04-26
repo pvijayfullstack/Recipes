@@ -1,0 +1,27 @@
+-# This file is app/view/recipes/index.html.haml
+%h1 All Recipes
+
+%table#recipes
+  %thead
+    %tr
+      %th Add to Grocery List
+      %th Recipe Title
+      %th More about Recipe
+
+  %tbody
+    - @recipes.each do |recipe|
+      %tr
+        %td= check_box_tag 'accept'  
+        %td= recipe.title
+        %td= link_to "More about #{recipe.title}", recipe_path(recipe)
+
+
+= link_to 'Add new recipe', new_recipe_path
+
+<br>
+<button type = "button">Retrieve List</button>
+<script type="text/javascript">
+button.eventhandler("click",alert("Grocery List"))
+myfunction()
+</script>
+

@@ -1,0 +1,66 @@
+-# in app/views/recipes/edit.html.haml
+%h1 Edit Recipe
+
+= form_tag recipe_path(@recipe), :method => :put do
+
+  = label :recipe, :title, 'Title'
+  = text_field :recipe, 'title'
+
+  = label :recipe, :apple, 'Apple'
+  = select :recipe, :apple, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :beet, 'Beet'
+  = select :recipe, :beet, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :carrot, 'Carrot'
+  = select :recipe, :carrot, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :celery, 'Celery'
+  = select :recipe, :celery, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :collardgreen, 'Collard Green'
+  = select :recipe, :collardgreen, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :cucumber, 'Cucumber'
+  = select :recipe, :cucumber, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :ginger, 'Ginger'
+  = select :recipe, :ginger, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :grapefruit, 'Grapefruit'
+  = select :recipe, :grapefruit, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :lemon, 'Lemon'
+  = select :recipe, :lemon, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :lime, 'Lime'
+  = select :recipe, :lime, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :mint, 'Mint'
+  = select :recipe, :mint, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :orange, 'Orange'
+  = select :recipe, :orange, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :pear, 'Pear'
+  = select :recipe, :pear, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :pumpkinpiespice, 'Pumpkin Pie Spice'
+  = select :recipe, :pumpkinpiespice, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :romaine, 'Romaine'
+  = select :recipe, :romaine, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :spinach, 'Spinach'
+  = select :recipe, :spinach, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :sweetpotato, 'Sweet Potato'
+  = select :recipe, :sweetpotato, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :swisschard, 'Swiss Chard'
+  = select :recipe, :swisschard, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = label :recipe, :tumericpowder, 'Tumeric Powder'
+  = select :recipe, :tumericpowder, ['0','1','2','3','4','5','6','7','8','9','10,'11','12']
+
+  = submit_tag 'Save Changes'

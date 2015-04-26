@@ -1,0 +1,10 @@
+-#in app/views/recipes/retrieve.html.haml
+
+%h1 Here is your Grocery List
+
+%table#recipes
+  %thead
+    %tr
+      %th Cups of Strawberries
+      %th Cups of Blueberries
+      %th Bananas

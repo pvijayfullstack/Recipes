@@ -1,0 +1,66 @@
+-# in app/views/recipes/show.html.haml
+
+%h1 Details about #{@recipe.title}
+
+%ul#details
+  %li
+    Apple:
+    = @recipe.apple
+  %li
+    Beet:
+    = @recipe.beet
+  %li
+    Carrot:
+    = @recipe.carrot
+  %li
+    Celery:
+    = @recipe.celery
+  %li
+    Collard Green:
+    = @recipe.collardgreen
+  %li
+    Cucumber:
+    = @recipe.cucumber
+  %li
+    Ginger:
+    = @recipe.ginger
+  %li
+    Grapefruit:
+    = @recipe.grapefruit
+  %li
+    Lemon:
+    = @recipe.lemon
+  %li
+    Lime:
+    = @recipe.lime
+  %li
+    Mint:
+    = @recipe.mint
+  %li
+    Orange:
+    = @recipe.orange
+  %li
+    Pear:
+    = @recipe.pear
+  %li
+    Pumpkin Pie Spice:
+    = @recipe.pumpkinpiespice
+  %li
+    Romaine:
+    = @recipe.romaine
+  %li
+    Spinach:
+    = @recipe.spinach
+  %li
+    Sweet Potato:
+    = @recipe.sweetpotato
+  %li
+    Swiss Chard:
+    = @recipe.swisschard
+  %li
+    Tumeric Powder:
+    = @recipe.tumericpowder
+
+= link_to 'Edit info', edit_recipe_path(@recipe)
+= button_to 'Delete', recipe_path(@recipe), :method => :delete, :confirm => 'Are you sure?'
+= link_to 'Back to recipe list', recipes_path

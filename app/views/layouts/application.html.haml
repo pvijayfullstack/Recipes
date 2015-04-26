@@ -1,0 +1,24 @@
+!!! 5
+%html
+  %head
+    %title Recipes!
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+
+  %body
+    %h1.title
+      Recipes!
+      %span
+        - if current_user.nil?
+          = link_to "Login", login_path, :style => 'color:#fff; float:right'
+        - if signed_in?
+          = link_to "Logout" , logout_path, :style => 'color:#fff; float:right'
+
+    #main
+      - if flash[:notice]
+        #notice.message= flash[:notice]
+      - elsif flash[:warning]
+        #warning.message= flash[:warning]
+
+      = yield
