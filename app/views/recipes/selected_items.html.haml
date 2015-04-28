@@ -1,4 +1,6 @@
 -# in app/views/recipes/edit.html.haml
+
+= "selected apples: #{@recipes.collect(&:apple).sum} "
 %h1 Edit Recipe
 - @recipes.each do |recipe|
   = form_tag recipe_path(recipe), :method => :put do
